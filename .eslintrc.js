@@ -4,7 +4,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
     'prettier',
     'prettier/react'
@@ -26,11 +25,14 @@ module.exports = {
     'prettier'
   ],
   rules: {
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.jsx', '.js'] }
     ],
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    "react/state-in-constructor": 2,
+    "no-unused-state": false,
+
   },
 };
